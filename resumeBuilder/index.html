@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+
+            <label for="image">Upload Profile Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" required></textarea>
+
+            <label for="hobbies">Hobbies:</label>
+            <textarea id="hobbies" name="hobbies" required></textarea>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resumeTemplate" class="hidden">
+        <h2>Generated Resume</h2>
+        <div id="resumeContent">
+            <!-- Resume content will be injected here -->
+        </div>
+        <button id="editResume">Edit</button>
+        <button id="downloadResume">Download PDF</button>
+        <button id="shareResume">Share Link</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
